@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.1.0
+
+Updated WeFitterLib to v3.1.0
+
+Heart rate samples, daily detail and daily summaries are stored much faster. Before, a long history (for example a start date of 3 months ago) took longer to process than iOS allows in the background, so heart rate samples uploaded only a few days at a time and fell behind
+
+Uploads are sent in chunks of up to 7 days of 15 minute samples, and each chunk is marked as uploaded when it succeeds
+
+Fixed data being uploaded again when it was stored while an upload was running
+
+Fixed heart rate samples, daily detail or daily summaries not syncing until the app restarted after a query returned an error or no results
+
+Added a privacy manifest to WeFitterLib
+
 ## 2.0.2
 
 Fixed crash when trying to read `cyclingCadence`
